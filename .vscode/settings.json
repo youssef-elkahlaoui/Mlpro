@@ -1,0 +1,9 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7b2ccc5e-cc66-44e5-8986-26b248bc1fa9/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/MyMachineLearningProject",
+    "appService.deploySubpath": ".",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
