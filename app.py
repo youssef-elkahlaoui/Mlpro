@@ -40,7 +40,7 @@ df['engine_enc'] = le_engine.transform(df['engine'])
 df['transmission_enc'] = le_transmission.transform(df['transmission'])
 
 # Scale numerical features for recommendation system
-df['price'] = df['price'] * 10
+df['price'] = df['price'] * 12.8  # Convert to MAD
 scaler = MinMaxScaler()
 df[['kilometerage', 'price', 'age']] = scaler.fit_transform(df[['kilometerage', 'price', 'age']])
 

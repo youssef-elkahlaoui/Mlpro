@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ url_for('static', filename='images/fav.png')}}" alt="Car Price Predictor Logo" style="width: 60px; height: 35px; filter: brightness(0) invert(1); margin-right: 10px;"> Car Price Predictor
+                <img src="{{ url_for('static', filename='images/fav.png')}}" alt="Car Price Predictor Logo" style="width: 50px; height: 25px; filter: brightness(0) invert(1); margin-right: 5px;"> Car Price Predictor
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -78,7 +78,7 @@
                                     <label for="age" class="form-label">
                                         <i class="fas fa-calendar-alt me-2"></i>Age (years)
                                     </label>
-                                    <input type="number" class="form-control" id="age" required min="0" max="30">
+                                    <input type="number" class="form-control" id="age" required min="0" max="30" value="1">
                                     <div class="invalid-feedback">Please enter a valid age (0-30 years)</div>
                                 </div>
                                 <!-- Mileage -->
@@ -86,7 +86,7 @@
                                     <label for="mileage" class="form-label">
                                         <i class="fas fa-road me-2"></i>Mileage (km)
                                     </label>
-                                    <input type="number" class="form-control" id="mileage" required min="10000" max="500000">
+                                    <input type="number" class="form-control" id="mileage" required min="1000" max="500000" value="50000">
                                     <div class="invalid-feedback">Please enter a valid mileage (10000-500,000 km)</div>
                                 </div>                        
                                 <!-- Engine -->
@@ -94,7 +94,7 @@
                                     <label for="engine" class="form-label">
                                         <i class="fas fa-cogs me-2"></i>Engine Type
                                     </label>
-                                    <select class="form-select" id="engine" required>
+                                    <select class="form-select" id="engine" required >
                                         <option value="">Select engine type</option>
                                         {% for engine in engines %}
                                         <option value="{{ engine }}">{{ engine }}</option>
@@ -108,7 +108,7 @@
                                     <label for="tranmission" class="form-label">
                                         <i class="fas fa-cog me-2"></i>Transmission
                                     </label>
-                                    <select class="form-select" id="transmission" required>
+                                    <select class="form-select" id="transmission" required value="Automatic">
                                         <option value="">Select transmission</option>
                                         {% for transmission in transmissions %}
                                         <option value="{{ transmission }}">{{ transmission }}</option>

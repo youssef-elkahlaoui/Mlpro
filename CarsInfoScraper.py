@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 import time
 from datetime import datetime, timedelta
 import os
-import random 
+import random
 
 # Headers to mimic a real browser
 headers = {
@@ -65,9 +65,9 @@ for price_from in range(3000, 80000, 500):  # From 3000 to 80000, step 500
     # Save data after each price range is completed
     if car_list:  # Only create if we have data
         cars = pd.DataFrame(car_list)
-        file_exists = os.path.isfile('c:/Users/jozef/Desktop/My machine learning project/dataSet/car_data.csv')
+        file_exists = os.path.isfile('./dataSet/car_data.csv')
         # save new dataframe in a csv file, appending to existing data   
-        cars.to_csv('c:/Users/jozef/Desktop/My machine learning project/dataSet/car_data.csv', 
+        cars.to_csv('./dataSet/car_data.csv', 
                     mode='a', 
                     header=not file_exists, 
                     index=False)
