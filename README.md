@@ -1,55 +1,81 @@
-# Car Price Prediction Project
+# Car Price Prediction and Recommendation System
 
-## Overview
-A machine learning application that predicts used car prices using data scraped from AA Cars website. The project includes data scraping, cleaning, analysis, model building, and a web interface.
+This project is a web application that provides car price predictions and recommends similar cars based on user input. It uses machine learning models to make accurate price predictions and find similar vehicles based on various features.
+
+## Features
+
+- Car price prediction based on multiple parameters
+- Similar car recommendations
+- Interactive web interface
+- Support for multiple car manufacturers and models
+- Data normalization and preprocessing
+
+## Tech Stack
+
+- **Backend**: Flask (Python)
+- **Machine Learning**: scikit-learn, XGBoost
+- **Data Processing**: NumPy, Pandas
+- **Frontend**: HTML, CSS, JavaScript
+- **Deployment**: Docker support
 
 ## Project Structure
-- `app.py`: Main Streamlit web application
-- `dataSet/`: Contains raw and cleaned car data
-- `models/`: Trained machine learning models
-- `notebooks/`: Jupyter notebooks for data processing and analysis
-- `static/`: CSS and JavaScript files
-- `templates/`: HTML templates
 
-## Key Features
-- Data scraping from AA Cars using BeautifulSoup
-- Comprehensive data cleaning and preprocessing
-- Exploratory data analysis with visualizations 
-- Multiple ML models comparison (Linear Regression, Random Forest, etc.)
-- Interactive web interface built with Streamlit
+```
+├── app.py              # Main Flask application
+├── Dockerfile          # Docker configuration
+├── requirements.txt    # Python dependencies
+├── models/            # Trained ML models
+├── dataSet/           # Dataset files
+├── static/            # Static assets (CSS, JS)
+└── templates/         # HTML templates
+```
 
-## Visualizations
-### Distribution of Car Manufacturers
-![Car manufacturer distribution](images/distribution-of-car-manufacturers.png)
+## Installation
 
-### Cars by Year
-![Year distribution](images/distribution-of-car-by-year.png)
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Engine Types Distribution
-![Car engine distribution](images/distribution-of-car-engine-type.png)
+## Running the Application
 
-### Transmission Types Distribution
-![Car transmission distribution](images/distribution-of-car-transmission.png)
+### Local Development
+```bash
+python app.py
+```
+The application will be available at `http://localhost:5000`
 
-### Manufacturer Word Cloud
-![Car manufacturer wordcloud](images/cast.png)
+### Using Docker
+```bash
+docker build -t car-prediction-app .
+docker run -p 5000:5000 car-prediction-app
+```
 
-## Model Performance
-The CatBoost Regressor achieved the best performance after hyperparameter tuning using GridSearchCV.
+## Dependencies
 
-## Web Application
-Try the live demo: [Car Prediction App](https://share.streamlit.io/victorumunna/car-price-prediction/app.py)
+- Flask==2.1.3
+- NumPy==1.23.5
+- Pandas==1.5.3
+- scikit-learn==1.1.3
+- XGBoost==1.6.2
 
-## Technologies Used
-- Python
-- BeautifulSoup
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
-- Streamlit
+## Features in Detail
 
-## Getting Started
-1. Install requirements:
-```sh
-pip install -r requirements.txt
+1. **Price Prediction**
+   - Input various car specifications
+   - Get estimated price based on machine learning model
+   - Support for multiple manufacturers and models
+
+2. **Car Recommendations**
+   - Get similar car recommendations based on your preferences
+   - View alternatives in the same price range
+   - Compare different models and manufacturers
+
+## Contributing
+
+Feel free to submit issues and enhancement requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
